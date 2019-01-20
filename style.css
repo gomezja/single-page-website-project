@@ -117,6 +117,40 @@ html, body {
     transform: rotate(45deg) translate(-4px, -7px);
 }
 
+.about-section {
+    margin: 90px 8.33% 0 8.33%;
+}
+
+.about-section__header {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 5px; 
+}
+
+.about-section__header--underline {
+    border-bottom: 3.5px solid #9cccc2;
+}
+
+.about-section__header--bold {
+    font-weight: 700;
+}
+
+.about-section__paragraph {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.about-section__paragraph--bold {
+    font-size: 18px;
+    font-weight: 700;
+    color: #d46c26;
+}
+
 @media screen and (max-width: 760px) {
     .nav__content {
         display: none;
