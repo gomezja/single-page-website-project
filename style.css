@@ -35,7 +35,7 @@ html, body {
     display: flex;
 
     height: 70px;
-    margin-right: 170px;
+    margin-right: 120px;
 }
 
 .nav__content {
@@ -48,7 +48,8 @@ html, body {
     width: 100%;
 }
 
-.nav__link {
+.nav__link,
+.nav__icon {
     display: flex;
     flex-direction: column;
 
@@ -67,10 +68,78 @@ html, body {
     transition: 0.4s;
 }
 
-.nav__link:hover {
+.nav__icon {
+    height: 70px;
+}
+
+.nav__link:hover,
+.nav__icon:hover {
     color: #9cccc2;
 }
 
 .nav__link--current-page {
 
+}
+
+.nav__line {
+    width: 20px;
+    height: 2px;
+    background-color: #e8e8e8;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.nav__line--margin-top {
+    margin-top: 6px;
+}
+
+.nav__icon:hover {
+    cursor: pointer;
+}
+
+.nav__icon:hover .nav__line {
+    background-color: #9cccc2;
+}
+
+.nav__icon--visibility {
+    display: none;
+}
+
+.nav__icon--transform-x .nav__line--transform-one {
+    transform: rotate(-45deg) translate(-4px, 7px);
+}
+
+.nav__icon--transform-x .nav__line--transform-two {
+    opacity: 0;
+}
+
+.nav__icon--transform-x .nav__line--transform-three {
+    transform: rotate(45deg) translate(-4px, -7px);
+}
+
+@media screen and (max-width: 760px) {
+    .nav__content {
+        display: none;
+    }
+
+    .nav__content--responsive {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        max-width: 880px;
+        z-index: 1;
+    }
+
+    .nav__content--responsive > *{
+        display: block;
+        background: rgba(36,44,46,0.95);
+        padding: 8px;
+        border-bottom: solid 1px rgba(174,204,198,0.4);
+    }
+
+    .nav__icon--visibility {
+        display: flex;
+    }
 }
