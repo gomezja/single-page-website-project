@@ -9,6 +9,7 @@ html, body {
     height: 100%;
 }
 
+/*========================================== Navigation Bar ==========================================*/
 .nav {
     display: flex;
     justify-content: space-between;
@@ -117,11 +118,13 @@ html, body {
     transform: rotate(45deg) translate(-4px, -7px);
 }
 
+/*========================================== About Section ==========================================*/
 .about-section {
     margin: 90px 8.33% 0 8.33%;
 }
 
-.about-section__header {
+.about-section__header,
+.project-section__header {
     text-transform: uppercase;
     text-align: center;
     font-size: 32px;
@@ -129,11 +132,13 @@ html, body {
     letter-spacing: 5px; 
 }
 
-.about-section__header--underline {
+.about-section__header--underline,
+.project-section__header--underline {
     border-bottom: 3.5px solid #9cccc2;
 }
 
-.about-section__header--bold {
+.about-section__header--bold,
+.project-section__header--bold {
     font-weight: 700;
 }
 
@@ -151,6 +156,56 @@ html, body {
     color: #d46c26;
 }
 
+/*========================================== Project Section ==========================================*/
+.project-section {
+    background: #f4f4f4;
+    padding: 100px 0;
+
+    margin-top: 90px;
+    position: relative;
+}
+
+.project-section--background-color {
+    background: #f0f0f0;
+    margin-bottom:200px;
+}
+
+.project-section__project-list,
+.project-section__project-example {
+    list-style-type: none;
+}
+
+.project-section__project-list {
+    padding: 0;
+    margin: 40px auto 0 auto;
+}
+
+.project-section__project-example {
+    display: inline-block;
+}
+
+.project-section__cell {
+    padding: 12px;
+    position: relative;
+    display: block;
+    margin: 0 10px 20px 10px;
+    background: #ffffff;
+    border-radius: 2px;
+    width: 276px;
+    height: 276px;
+}
+
+.project-section__cell--shadow {
+    box-shadow: #c5c5c5 0px 0px 2px;
+}
+
+.project-section__project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/*========================================== Media Queries ==========================================*/
 @media screen and (max-width: 760px) {
     .nav__content {
         display: none;
@@ -175,5 +230,38 @@ html, body {
 
     .nav__icon--visibility {
         display: flex;
+    }
+}
+
+/*------------ Project Cells ------------*/
+/* four colums */
+@media screen and (min-width: 1263px) {
+    ul {
+        max-width: 1197px;
+    }
+}
+
+/* three colums */
+@media screen and (max-width: 1262px) {
+    ul {
+        max-width: 897px;
+    }
+}
+
+/* two columns */
+@media screen and (max-width: 915px) {
+    ul {
+        max-width: 597px;
+    }
+}
+
+/* one column */
+@media screen and (max-width: 615px) {
+    ul {
+        max-width: 276px;
+    }
+
+    .project-section__cell {
+        margin: 0 0 20px 0;
     }
 }
