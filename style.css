@@ -205,6 +205,50 @@ html, body {
     height: auto;
 }
 
+.project-section__project-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+    opacity: 0;
+    background: #ffffff;
+    transition: .5s ease;
+    letter-spacing: 1px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.project-section__cell:hover .project-section__project-info {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.project-section__project-name {
+    font-weight: 700;
+    color: #000000;
+    font-size: 16px;
+}
+
+.project-section__project-description,
+.project-section__project-date {
+    color: #797979;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.project-section__project-description {
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.project-section__project-date {
+    position: absolute;
+    bottom: 20;
+    left: 20;
+}
+
 /*========================================== Media Queries ==========================================*/
 @media screen and (max-width: 760px) {
     .nav__content {
