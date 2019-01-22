@@ -159,10 +159,10 @@ html, body {
 /*========================================== Project Section ==========================================*/
 .project-section {
     background: #f4f4f4;
-    padding: 100px 0;
-
-    margin-top: 90px;
+    padding: 45px 0 0 0;
+    margin-top: 45px;
     position: relative;
+    width: 100%;
 }
 
 .project-section--background-color {
@@ -247,6 +247,39 @@ html, body {
     position: absolute;
     bottom: 20;
     left: 20;
+}
+
+/*========================================== Image Close Up ==========================================*/
+.close-up {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #343434
+}
+
+.close-up__image {
+    display: block;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.close-up__button {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    color: #e8e8e8;
+    font-size: 40px;
+}
+
+.close-up__button:hover {
+    color: #9cccc2;
+    cursor: pointer;
 }
 
 /*========================================== Media Queries ==========================================*/
