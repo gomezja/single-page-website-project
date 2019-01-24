@@ -277,27 +277,57 @@ html, body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: #343434
+    background: rgba(52, 52, 52, 0.9);
 }
 
-.close-up__image {
-    display: block;
-    width: 80%;
+.close-up__container {
+    position: relative;
+    background: #f4f4f4;
+    border-radius: 3px;
+    width: 70%;
     max-width: 800px;
     margin: 20px auto;
 }
 
+.close-up__info {
+    padding: 20px;
+}
+
+.close-up__name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
 .close-up__button {
     position: absolute;
+    /* top: 6px;
+    right: 20px; */
     top: 0;
-    right: 35px;
-    color: #e8e8e8;
+    right: 0;
+    color: #777777;
     font-size: 40px;
+    padding: 4px 17px;
 }
 
 .close-up__button:hover {
     color: #9cccc2;
     cursor: pointer;
+}
+
+.close-up__type {
+    border-radius: 3px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.close-up__image {
+    display: inline-block;
+    height: auto;
+    width: 100%;
 }
 
 /*========================================== Media Queries ==========================================*/
