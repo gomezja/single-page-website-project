@@ -121,11 +121,13 @@ html, body {
 
 /*========================================== About Section ==========================================*/
 .about-section {
-    margin: 90px 8.33% 0 8.33%;
+    margin: 0 8.33%;
+    padding: 90px 0 45px 0;
 }
 
 .about-section__header,
-.project-section__header {
+.project-section__header,
+.contact__header {
     text-transform: uppercase;
     text-align: center;
     font-size: 32px;
@@ -134,12 +136,14 @@ html, body {
 }
 
 .about-section__header--underline,
-.project-section__header--underline {
+.project-section__header--underline,
+.contact__header--underline {
     border-bottom: 3.5px solid #9cccc2;
 }
 
 .about-section__header--bold,
-.project-section__header--bold {
+.project-section__header--bold,
+.contact__header--bold {
     font-weight: 700;
 }
 
@@ -159,8 +163,7 @@ html, body {
 
 /*========================================== Project Section ==========================================*/
 .project-section {
-    padding: 45px 0 0 0;
-    margin-top: 45px;
+    padding: 45px 0 45px 0;
     position: relative;
     width: 100%;
 }
@@ -328,6 +331,75 @@ html, body {
     display: inline-block;
     height: auto;
     width: 100%;
+}
+
+/*========================================== Contact Section ==========================================*/
+.contact {
+    background: #303030;
+    padding: 90px 0 45px 0;
+}
+
+.contact__header {
+    color: #ffffff;
+}
+
+.contact__form {
+    margin: 40px auto 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact__section {
+    display: block;
+    margin-bottom: 4%;
+}
+
+.contact__input {
+    background: #e8e8e8;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 7px;
+}
+
+::placeholder {
+    color: #9b9b9b;
+    font-weight: 400;
+    opacity: 1;
+}
+
+.contact__input--textarea {
+    height: 146px;
+    resize: none;
+}
+
+.contact__input--50 {
+    width: 48%;
+}
+
+.contact__input--100 {
+    width: 100%;
+}
+
+.contact__input--ab {
+    float: right;
+}
+
+.button {
+    background: #d46c26;
+    border: none;
+    height: 50px;
+    width: 180px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button__text {
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 1px;
 }
 
 /*========================================== Media Queries ==========================================*/

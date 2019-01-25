@@ -182,6 +182,30 @@
         </div>
     </div>
 
+    <!-- CONTACT SECTION -->
+    <div class="contact">
+        <h1 class="contact__header">
+            <span class="contact__header--underline"><span class="contact__header--bold">C</span>ont</span>act
+        </h1>
+
+        <form class="contact__form" action="mailto:someone@example.com" method="post" enctype="text/plain">
+            <div class="contact__section">
+                <input class="contact__input contact__input--50" type="text" name="name" placeholder="Name*">
+                <input class="contact__input contact__input--50 contact__input--ab" type="text" name="subject" placeholder="Subject*">
+            </div>
+
+            <div class="contact__section">
+                <input class="contact__input  contact__input--100" type="text" name="email" placeholder="Email*">
+            </div>
+
+            <div class="contact__section">
+                <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here*"></textarea>
+            </div>
+            
+            <button class="button" type="submit"><span class="button__text">Submit</span></button>
+        </form>
+    </div>
+    
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
