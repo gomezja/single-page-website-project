@@ -5,9 +5,17 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    font-size: 16px;
+}
+
 html, body {
     height: 100%;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+
+.body--overflow {
+    overflow: hidden;
 }
 
 /*========================================== Navigation Bar ==========================================*/
@@ -62,7 +70,7 @@ html, body {
     color: #e8e8e8;
     text-decoration: none;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
 
@@ -120,73 +128,88 @@ html, body {
 }
 
 /*========================================== About Section ==========================================*/
-.about-section {
-    margin: 0 8.33%;
-    padding: 90px 0 45px 0;
+.about,
+.project,
+.contact {
+    padding: 90px 0 90px 0;
 }
 
-.about-section__header,
-.project-section__header,
+.about__header,
+.project__header,
 .contact__header {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 300;
-    letter-spacing: 5px; 
+    letter-spacing: 0.16em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.about-section__header--underline,
-.project-section__header--underline,
+.about__header--underline,
+.project__header--underline,
 .contact__header--underline {
     border-bottom: 3.5px solid #9cccc2;
 }
 
-.about-section__header--bold,
-.project-section__header--bold,
+.about__header--bold,
+.project__header--bold,
 .contact__header--bold {
     font-weight: 700;
 }
 
-.about-section__paragraph {
-    margin-top: 40px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 32px;
-    letter-spacing: 1px;
+.about {
+    background: #ffffff;
+    margin: 0 8.33%;
 }
 
-.about-section__paragraph--bold {
-    font-size: 18px;
-    font-weight: 700;
+.about__paragraph {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 1500px;
+    line-height: 1.9em;
+    letter-spacing: 0.0625em;
+    text-align: center;
+}
+
+.about__paragraph--bold {
     color: #d46c26;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.about__paragraph--mt-20 {
+    margin-top: 20px;
+}
+
+.about__paragraph--mt-40 {
+    margin-top: 40px;
 }
 
 /*========================================== Project Section ==========================================*/
-.project-section {
-    padding: 45px 0 45px 0;
+.project {
     position: relative;
     width: 100%;
 }
 
-.project-section--background-color {
+.project--background-color {
     background: #f4f4f4;
 }
 
-.project-section__project-list,
-.project-section__project-example {
+.project__container,
+.project__example {
     list-style-type: none;
 }
 
-.project-section__project-list {
+.project__container {
     padding: 0;
     margin: 40px auto 0 auto;
 }
 
-.project-section__project-example {
+.project__example {
     display: inline-block;
 }
 
-.project-section__cell {
+.project__cell {
     padding: 12px;
     position: relative;
     display: block;
@@ -197,17 +220,17 @@ html, body {
     height: 276px;
 }
 
-.project-section__cell--shadow {
+.project__cell--shadow {
     box-shadow: #c5c5c5 0px 0px 2px;
 }
 
-.project-section__project-image {
+.project__image {
     display: block;
-    width: 100%;
     height: auto;
+    width: 100%;
 }
 
-.project-section__project-info {
+.project__info {
     position: absolute;
     top: 0;
     left: 0;
@@ -216,65 +239,65 @@ html, body {
     opacity: 0;
     background: #ffffff;
     transition: .5s ease;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625em;
     padding: 20px;
     text-decoration: none;
 }
 
-.project-section__cell:hover .project-section__project-info {
-    opacity: 0.9;
+.project__cell:hover .project__info {
     cursor: pointer;
+    opacity: 0.9;
 }
 
-.project-section__project-name {
-    font-weight: 700;
+.project__name {
     color: #000000;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
-.project-section__project-description,
-.project-section__project-date {
+.project__description,
+.project__date {
     color: #797979;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
 }
 
-.project-section__project-description {
+.project__description {
+    line-height: 1.667em;
     margin-top: 5px;
     overflow: hidden;
 }
 
-.project-section__project-type {
+.project__type {
     padding: 5px;
     color: #ffffff;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 0.625rem;
     position: absolute;
     bottom: 20px;
     right: 20px;
     border-radius: 3px;
 }
 
-.project-section__project-type--design {
-    background: slateblue;
+.project__type--design {
+    background: #6a5acd;
 }
 
-.project-section__project-type--development {
-    background: green;
+.project__type--development {
+    background: #008000;
 }
 
-.project-section__project-date {
-    position: absolute;
+.project__date {
     bottom: 20px;
     left: 20px;
+    position: absolute;    
 }
 
 /*========================================== Image Close Up ==========================================*/
 .close-up {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
@@ -297,7 +320,7 @@ html, body {
 }
 
 .close-up__name {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -309,7 +332,7 @@ html, body {
     top: 0;
     right: 0;
     color: #777777;
-    font-size: 40px;
+    font-size: 2.5rem;
     padding: 4px 17px;
 }
 
@@ -322,7 +345,7 @@ html, body {
     border-radius: 3px;
     color: #ffffff;
     display: inline-block;
-    font-size: 10px;
+    font-size: 0.625rem;
     margin-top: 5px;
     padding: 5px;
 }
@@ -336,7 +359,6 @@ html, body {
 /*========================================== Contact Section ==========================================*/
 .contact {
     background: #303030;
-    padding: 90px 0 45px 0;
 }
 
 .contact__header {
@@ -345,7 +367,8 @@ html, body {
 
 .contact__form {
     margin: 40px auto 0 auto;
-    max-width: 500px;
+    max-width: 520px;
+    padding: 0 10px;
     width: 100%;
 }
 
@@ -357,7 +380,7 @@ html, body {
 .contact__input {
     background: #e8e8e8;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 1px;
     padding: 7px;
 }
@@ -385,21 +408,21 @@ html, body {
     float: right;
 }
 
-.button {
+.btn {
+    color: #ffffff;
     background: #d46c26;
     border: none;
-    height: 50px;
-    width: 180px;
-}
-
-.button:hover {
-    cursor: pointer;
-}
-
-.button__text {
-    color: #ffffff;
-    font-size: 16px;
+    display: inline-block;
+    font-size: 1rem;
+    height: 40px;
     letter-spacing: 1px;
+    line-height: 40px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 /*========================================== Media Queries ==========================================*/
@@ -458,7 +481,7 @@ html, body {
         max-width: 276px;
     }
 
-    .project-section__cell {
+    .project__cell {
         margin: 0 0 20px 0;
     }
 }

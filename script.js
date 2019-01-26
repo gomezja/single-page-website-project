@@ -6,31 +6,37 @@ $(document).ready(function() {
     });
 
     // project cell is clicked
-    $(".project-section__cell").click(function() {
+    $(".project__cell").click(function() {
+        $("body").addClass("body--overflow");
+
         $("#close-up").css("display", "block");
         $("#close-up__image").attr("src", $(this).find("img").attr("src"));
 
         // change text content in close-up
-        $(".close-up__name").text($(this).find(".project-section__project-name").text());
-        $(".close-up__type").text($(this).find(".project-section__project-type").text());
+        $(".close-up__name").text($(this).find(".project__name").text());
+        $(".close-up__type").text($(this).find(".project__type").text());
 
         // add close-up type class
-        if($(this).find(".project-section__project-type").text().trim() == 'Design'){
-            $(".close-up__type").addClass("project-section__project-type--design");
+        if($(this).find(".project__type").text().trim() == 'Design'){
+            $(".close-up__type").addClass("project__type--design");
         } else {
-            $(".close-up__type").addClass("project-section__project-type--development");
+            $(".close-up__type").addClass("project__type--development");
         }
     });
 
-    // project close up area is clicked
+    // project close-up close button is clicked
     $(".close-up__button").click(function() {
+        $("body").removeClass("body--overflow");
+
         $("#close-up").css("display", "none");
         $("#close-up__image").attr("src", "");
 
+        var projectType = $(".close-up__type");
+
         // remove close-up type class
-        if($(".close-up__type").hasClass("project-section__project-type--design"))
-            $(".close-up__type").removeClass("project-section__project-type--design");
+        if($(projectType).hasClass("project__type--design"))
+            $(projectType).removeClass("project__type--design");
         else
-            $(".close-up__type").removeClass("project-section__project-type--development");
+            $(projectType).removeClass("project__type--development");
     });
 });
