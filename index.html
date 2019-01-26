@@ -12,19 +12,19 @@
 </head>
 <body>
     <!-- NAVIGATION BAR -->
+    <div class="a">
     <div class="nav">
         <div class="nav__container nav__container--left">
             <div class="nav__brand">
-                <a class="nav__link" href="index.html">gomezja</a>
+                <div class="nav__link" id="navHome">gomezja</div>
             </div>
         </div>
 
         <div class="nav__container nav__container--right">
             <div class="nav__content" id="content">
-                <a class="nav__link nav__link--current-page" href="index.html">Home</a>
-                <a class="nav__link" href="">About</a>
-                <a class="nav__link" href="">Projects</a>
-                <a class="nav__link" href="">Contact</a>
+                <div class="nav__link" id="navAbout">About</div>
+                <div class="nav__link" id="navProjects">Projects</div>
+                <div class="nav__link" id="navContact">Contact</div>
 
                 <a class="nav__icon" href="https://www.linkedin.com/in/gomezja/"><i class="fab fa-github fa-lg"></i></a>
                 <a class="nav__icon" href="https://github.com/gomezja"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -38,9 +38,10 @@
             <div class="nav__line nav__line--margin-top nav__line--transform-three"></div>
         </div>
     </div>
+    </div>
 
     <!-- ABOUT SECTION-->
-    <div class="about">
+    <div class="about" id="about">
         <h1 class="about__header">
             <span class="about__header--underline"><span class="about__header--bold">A</span>bo</span>ut
         </h1>
@@ -61,8 +62,7 @@
     </div>
 
     <!-- PROJECT SECTION -->
-    <!-- <div class="triangle"></div> -->
-    <div class="project project--background-color">
+    <div class="project project--background-color" id="projects">
         <h1 class="project__header">
             <span class="project__header--underline"><span class="project__header--bold">P</span>roj</span>ects
         </h1>
@@ -209,7 +209,7 @@
     </div>
 
     <!-- CONTACT SECTION -->
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1 class="contact__header">
             <span class="contact__header--underline"><span class="contact__header--bold">C</span>ont</span>act
         </h1>

@@ -1,4 +1,23 @@
 $(document).ready(function() {
+    $("#navAbout").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#about").offset().top
+        }, 800);
+    });
+
+    $("#navProjects").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#projects").offset().top
+        }, 800);
+
+    });
+
+    $("#navContact").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#contact").offset().top
+        }, 800);
+    });
+
     // hamburger icon is clicked
     $("#ham").click(function() {
         $("#content").toggleClass("nav__content--responsive");
