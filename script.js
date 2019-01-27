@@ -58,4 +58,23 @@ $(document).ready(function() {
         else
             $(projectType).removeClass("project__type--development");
     });
+
+    // display scroll-up button
+    var scrollBtn = $(".btn--scroll-up");
+
+    $(window).scroll(function() {
+        var pos = $(window).scrollTop();
+
+        if(pos > 100)
+            $(scrollBtn).fadeIn(300);
+        else
+            $(scrollBtn).fadeOut(300);
+    });
+
+    // go back up when scroll-up button is clicked
+    $(".btn--scroll-up").click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 800);
+    });
 });
