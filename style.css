@@ -139,6 +139,13 @@ html, body {
     padding: 90px 0 90px 0;
 }
 
+.about__title,
+.project__title,
+.contact__title {
+    display: table;
+    margin: 0 auto;
+}
+
 .about__header,
 .project__header,
 .contact__header {
@@ -147,12 +154,6 @@ html, body {
     letter-spacing: 0.16em;
     text-align: center;
     text-transform: uppercase;
-}
-
-.about__header--underline,
-.project__header--underline,
-.contact__header--underline {
-    border-bottom: 3.5px solid #9cccc2;
 }
 
 .about__header--bold,
@@ -504,3 +505,33 @@ html, body {
         margin: 0 0 20px 0;
     }
 }
+
+.underline {
+    background: #9cccc2;
+    height: 3.5px;
+    width: 0;
+}
+
+.underline--start {
+	width: 0px;
+	-webkit-animation: line-start 2s ease-out forwards;
+	   -moz-animation: line-start 2s ease-out forwards;
+	    -ms-animation: line-start 2s ease-out forwards;
+	     -o-animation: line-start 2s ease-out forwards;
+	        animation: line-start 2s ease-out forwards;
+}
+
+@-moz-keyframes line-start {
+    from {width: 0px;}
+    to {width: 50%;}
+}
+
+@-webkit-keyframes line-start {
+	from {width: 0px;}
+	to {width: 50%;}
+}
+
+@keyframes line-start {
+    from {width: 0%;}
+    to {width: 50%;}
+  }

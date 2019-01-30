@@ -1,10 +1,15 @@
 $(document).ready(function() {
+    checkScrollBtn();
+
+    /*================= Click Event Listeners =================*/
+    // go to about section
     $("#navAbout").click(function() {
         $("html, body").animate({
             scrollTop: $("#about").offset().top
         }, 800);
     });
 
+    // go to projects section
     $("#navProjects").click(function() {
         $("html, body").animate({
             scrollTop: $("#projects").offset().top
@@ -12,6 +17,7 @@ $(document).ready(function() {
 
     });
 
+    // go to contact section
     $("#navContact").click(function() {
         $("html, body").animate({
             scrollTop: $("#contact").offset().top
@@ -59,22 +65,26 @@ $(document).ready(function() {
             $(projectType).removeClass("project__type--development");
     });
 
-    // display scroll-up button
-    var scrollBtn = $(".btn--scroll-up");
-
-    $(window).scroll(function() {
-        var pos = $(window).scrollTop();
-
-        if(pos > 100)
-            $(scrollBtn).fadeIn(300);
-        else
-            $(scrollBtn).fadeOut(300);
-    });
-
     // go back up when scroll-up button is clicked
     $(".btn--scroll-up").click(function() {
         $("html, body").animate({
             scrollTop: 0
         }, 800);
     });
+
+    /*================= Scroll Event Listeners =================*/
+    $(window).scroll(function() {
+        checkScrollBtn();
+    });
+
+    // display or hide scroll button
+    function checkScrollBtn() {
+        var scrollBtn = $(".btn--scroll-up");
+        var pos = $(window).scrollTop();
+
+        if(pos > 100)
+            $(scrollBtn).fadeIn(300);
+        else
+            $(scrollBtn).fadeOut(300);
+    }
 });
