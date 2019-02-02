@@ -254,6 +254,7 @@ html, body {
 .project__cell:hover .project__info {
     cursor: pointer;
     opacity: 0.9;
+    box-shadow: #e2e2e2 0 2px 4px 4px;
 }
 
 .project__name {
@@ -439,6 +440,19 @@ html, body {
     position: fixed;
     right: 8.33%;
     z-index: 2;
+}
+
+.btn--scroll-up:hover .fa-angle-up {
+    -webkit-animation: float 0.75s ease-in-out infinite;
+    -moz-animation: float 0.75s ease-in-out infinite;
+    -o-animation: float 0.75s ease-in-out infinite;
+    animation: float 0.75s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-5px); }
+    100% { transform: translatey(0px); }
 }
 
 /*========================================== Media Queries ==========================================*/
