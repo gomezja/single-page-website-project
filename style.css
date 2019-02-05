@@ -132,7 +132,31 @@ html, body {
     transform: rotate(45deg) translate(-4px, -7px);
 }
 
+/*========================================== Introduction Section ==========================================*/
+.intro {
+    margin: 0 8.33%;
+}
+
+.intro__header {
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.intro__subheader {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.9em;
+    letter-spacing: 0.0625em;
+}
+
 /*========================================== About Section ==========================================*/
+.section-one {
+    overflow: hidden;
+}
+
+.intro,
 .about,
 .project,
 .contact {
@@ -156,14 +180,48 @@ html, body {
     text-transform: uppercase;
 }
 
+.intro__header--bold,
 .about__header--bold,
 .project__header--bold,
 .contact__header--bold {
     font-weight: 700;
 }
 
+.about__underline,
+.project__underline,
+.contact__underline {
+    background: #9cccc2;
+    height: 3.5px;
+    width: 0;
+}
+
+.about__underline--start,
+.project__underline--start,
+.contact__underline--start {
+	width: 0px;
+	-webkit-animation: line-start 2s ease-out forwards;
+	   -moz-animation: line-start 2s ease-out forwards;
+	    -ms-animation: line-start 2s ease-out forwards;
+	     -o-animation: line-start 2s ease-out forwards;
+	        animation: line-start 2s ease-out forwards;
+}
+
+@-moz-keyframes line-start {
+    from {width: 0px;}
+    to {width: 50%;}
+}
+
+@-webkit-keyframes line-start {
+	from {width: 0px;}
+	to {width: 50%;}
+}
+
+@keyframes line-start {
+    from {width: 0%;}
+    to {width: 50%;}
+  }
+
 .about {
-    background: #ffffff;
     margin: 0 8.33%;
 }
 
@@ -193,6 +251,17 @@ html, body {
 }
 
 /*========================================== Project Section ==========================================*/
+.project::before {
+    background: #f4f4f4;
+    content: "";
+    height: 180%;
+    position: absolute;
+    top: 0;
+    transform: skewY(-6deg);
+    width: 100%;
+    z-index: -1;
+}
+
 .project {
     position: relative;
     width: 100%;
@@ -200,6 +269,12 @@ html, body {
 
 .project--background-color {
     background: #f4f4f4;
+}
+
+.project__svg {
+    position: absolute;
+    top: 0;
+    width: 100%;    
 }
 
 .project__container,
@@ -224,7 +299,7 @@ html, body {
     background: #ffffff;
     border-radius: 3px;
     width: 276px;
-    height: 276px;
+    height: auto;
 }
 
 .project__cell--shadow {
@@ -427,9 +502,6 @@ html, body {
     line-height: 40px;
     padding: 0 20px;
     text-transform: uppercase;
-}
-
-.btn:hover {
     cursor: pointer;
 }
 
@@ -456,6 +528,7 @@ html, body {
 }
 
 /*========================================== Media Queries ==========================================*/
+/*------------ Navigation Bar ------------*/
 @media screen and (max-width: 760px) {
     .nav__content {
         display: none;
@@ -519,33 +592,3 @@ html, body {
         margin: 0 0 20px 0;
     }
 }
-
-.underline {
-    background: #9cccc2;
-    height: 3.5px;
-    width: 0;
-}
-
-.underline--start {
-	width: 0px;
-	-webkit-animation: line-start 2s ease-out forwards;
-	   -moz-animation: line-start 2s ease-out forwards;
-	    -ms-animation: line-start 2s ease-out forwards;
-	     -o-animation: line-start 2s ease-out forwards;
-	        animation: line-start 2s ease-out forwards;
-}
-
-@-moz-keyframes line-start {
-    from {width: 0px;}
-    to {width: 50%;}
-}
-
-@-webkit-keyframes line-start {
-	from {width: 0px;}
-	to {width: 50%;}
-}
-
-@keyframes line-start {
-    from {width: 0%;}
-    to {width: 50%;}
-  }
