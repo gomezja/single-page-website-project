@@ -13,32 +13,48 @@
 <body>
     <!-- NAVIGATION BAR -->
     <div class="a">
-    <div class="nav">
-        <div class="nav__container nav__container--left">
-            <div class="nav__brand">
-                <div class="nav__link" id="navHome">gomezja</div>
+        <div class="nav">
+            <div class="nav__container nav__container--left">
+                <div class="nav__brand">
+                    <div class="nav__link" id="navHome">gomezja</div>
+                </div>
+            </div>
+
+            <div class="nav__container nav__container--right">
+                <div class="nav__content" id="content">
+                    <div class="nav__link" id="navAbout">About</div>
+                    <div class="nav__link" id="navProjects">Projects</div>
+                    <div class="nav__link" id="navContact">Contact</div>
+
+                    <a class="nav__icon" href="https://www.linkedin.com/in/gomezja/"><i class="fab fa-github fa-lg"></i></a>
+                    <a class="nav__icon" href="https://github.com/gomezja"><i class="fab fa-linkedin fa-lg"></i></a>
+
+                </div>
+            </div>
+
+            <div class="nav__icon nav__icon--visibility" id="ham">
+                <div class="nav__line nav__line--transform-one"></div>
+                <div class="nav__line nav__line--margin-top nav__line--transform-two"></div>
+                <div class="nav__line nav__line--margin-top nav__line--transform-three"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WELCOME SECTION -->
+    <section class="welcome welcome--background">
+        <div class="welcome__content">
+            <div class="ab">
+                <div class="welcome__header"><span class="welcome__header--bold">Jesus</span>Gomez</div>
+                <div class="welcome__subheader">An Inspiring Web Designer & Developer</div>
+                <button class="btn welcome__btn">My Projects</button>
             </div>
         </div>
 
-        <div class="nav__container nav__container--right">
-            <div class="nav__content" id="content">
-                <div class="nav__link" id="navAbout">About</div>
-                <div class="nav__link" id="navProjects">Projects</div>
-                <div class="nav__link" id="navContact">Contact</div>
-
-                <a class="nav__icon" href="https://www.linkedin.com/in/gomezja/"><i class="fab fa-github fa-lg"></i></a>
-                <a class="nav__icon" href="https://github.com/gomezja"><i class="fab fa-linkedin fa-lg"></i></a>
-
-            </div>
-        </div>
-
-        <div class="nav__icon nav__icon--visibility" id="ham">
-            <div class="nav__line nav__line--transform-one"></div>
-            <div class="nav__line nav__line--margin-top nav__line--transform-two"></div>
-            <div class="nav__line nav__line--margin-top nav__line--transform-three"></div>
-        </div>
-    </div>
-    </div>
+        <svg class="welcome__svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#ffff" stroke="#ffff" stroke-width="0px" points="0,0 50,100 0,100"/>
+            <polygon fill="#ffff" stroke="#ffff" stroke-width="0px" points="100,0 50,100 100,100"/>
+        </svg>
+    </section>
 
     <!-- SECTION ONE -->
     <section class="section-one">
@@ -218,6 +234,11 @@
 
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
+        <svg class="contact__svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <polygon fill="#f4f4f4" stroke="#f4f4f4" stroke-width="2px" points="0,0 50,0 0,90"/>
+            <polygon fill="#f4f4f4" stroke="#f4f4f4" stroke-width="2px" points="100,0 50,0 100,90"/>
+        </svg>
+        
         <div class="contact__title">
             <h1 class="contact__header">
                 <span class="contact__header--bold">C</span>ontact

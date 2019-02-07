@@ -133,22 +133,60 @@ html, body {
 }
 
 /*========================================== Introduction Section ==========================================*/
-.intro {
+.welcome {
+    height: calc(100vh - 70px + 6vw);
+    position: relative;
+}
+
+.welcome--background {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/projects/fibonacci-calculator.png);
+    color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.welcome__content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+    justify-content: center;
     margin: 0 8.33%;
 }
 
-.intro__header {
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+.ab {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.intro__subheader {
-    font-size: 1rem;
+.welcome__header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+}
+
+.welcome__header--bold {
+    font-weight: 700;
+}
+
+.welcome__subheader {
+    font-size: 1.2rem;
     font-weight: 400;
-    line-height: 1.9em;
-    letter-spacing: 0.0625em;
+    letter-spacing: 0.1em;
+    color: #cecece;
+}
+
+.welcome__btn {
+    margin-top: 20px;
+}
+
+.welcome__svg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6vw;
 }
 
 /*========================================== About Section ==========================================*/
@@ -442,6 +480,14 @@ html, body {
 /*========================================== Contact Section ==========================================*/
 .contact {
     background: #303030;
+    position: relative;
+}
+
+.contact__svg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 6vw;
 }
 
 .contact__header {
@@ -590,5 +636,23 @@ html, body {
 
     .project__cell {
         margin: 0 0 20px 0;
+    }
+}
+
+/*------------ Welcome Section ------------*/
+@media screen and (max-width: 380px) {
+    .welcome__header,
+    .about__header,
+    .project__header,
+    .contact__header {
+        font-size: 1.5rem;
+    }
+
+    .welcome__subheader {
+        font-size: 1rem;
+    }
+
+    .welcome__content {
+        text-align: center;
     }
 }
