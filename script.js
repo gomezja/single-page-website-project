@@ -3,14 +3,14 @@ $(document).ready(function() {
 
     /*================= Click Event Listeners =================*/
     // go to about section
-    $("#navAbout").click(function() {
+    $("#goToAbout").click(function() {
         $("html, body").animate({
             scrollTop: $("#about").offset().top
         }, 800);
     });
 
     // go to projects section
-    $("#navProjects").click(function() {
+    $("#goToProjects, #goToProjects2").click(function() {
         $("html, body").animate({
             scrollTop: $("#projects").offset().top
         }, 800);
@@ -18,7 +18,7 @@ $(document).ready(function() {
     });
 
     // go to contact section
-    $("#navContact").click(function() {
+    $("#goToContact").click(function() {
         $("html, body").animate({
             scrollTop: $("#contact").offset().top
         }, 800);

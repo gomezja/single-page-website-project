@@ -542,18 +542,32 @@ html, body {
 .btn {
     background: #d46c26;
     border: none;
-    color: #ffffff;
+    border-radius: 3px;
     display: inline-block;
-    font-size: 1rem;
     height: 40px;
-    letter-spacing: 1px;
-    line-height: 40px;
+    padding: 0;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.btn__text {
+    color: #ffffff;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
     padding: 0 20px;
     text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #dd7c3c;
     cursor: pointer;
 }
 
 .btn--scroll-up {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0 20px;
+
     bottom: 90px;
     display: none;
     font-size: 1.5rem;

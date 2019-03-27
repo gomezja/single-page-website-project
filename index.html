@@ -22,9 +22,9 @@
 
             <div class="nav__container nav__container--right">
                 <div class="nav__content" id="content">
-                    <div class="nav__link" id="navAbout">About</div>
-                    <div class="nav__link" id="navProjects">Projects</div>
-                    <div class="nav__link" id="navContact">Contact</div>
+                    <div class="nav__link nav__link--move-to-about" id="goToAbout">About</div>
+                    <div class="nav__link" id="goToProjects">Projects</div>
+                    <div class="nav__link" id="goToContact">Contact</div>
 
                     <a class="nav__icon" href="https://www.linkedin.com/in/gomezja/"><i class="fab fa-github fa-lg"></i></a>
                     <a class="nav__icon" href="https://github.com/gomezja"><i class="fab fa-linkedin fa-lg"></i></a>
@@ -46,7 +46,7 @@
             <div class="ab">
                 <div class="welcome__header"><span class="welcome__header--bold">Jesus</span>Gomez</div>
                 <div class="welcome__subheader">An Inspiring Web Designer & Developer</div>
-                <button class="btn welcome__btn">My Projects</button>
+                <button class="btn welcome__btn" id="goToProjects2"><span class="btn__text">My Projects</span></button>
             </div>
         </div>
 
@@ -235,7 +235,7 @@
                 <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here*"></textarea>
             </div>
             
-            <button class="btn" type="submit">Submit</button>
+            <button class="btn" type="submit"><span class="btn__text">Submit</span></button>
         </form>
     </section>
 
