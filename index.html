@@ -216,23 +216,18 @@
             </h1>
             <div class="contact__underline contact__underline--start"></div>
         </div>
-    
-        <form class="contact__form" action="mailto:someone@example.com" method="post" enctype="text/plain">
-            <div class="contact__section">
-                <input class="contact__input contact__input--50" type="text" name="name" placeholder="Name*">
-                <input class="contact__input contact__input--50 contact__input--ab" type="text" name="subject" placeholder="Subject*">
-            </div>
+        
+        <div class="contact__wrapper">
+            <form class="contact__form" action="mailto:someone@example.com" method="post" enctype="text/plain">
+                <input class="contact__input contact__input--100" type="text" name="name" placeholder="Name">
+                
+                <input class="contact__input contact__input--100" type="text" name="email" placeholder="Email">
 
-            <div class="contact__section">
-                <input class="contact__input contact__input--100" type="text" name="email" placeholder="Email*">
-            </div>
-
-            <div class="contact__section">
-                <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here*"></textarea>
-            </div>
-            
-            <button class="btn" type="submit"><span class="btn__text">Submit</span></button>
-        </form>
+                <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here"></textarea>
+                
+                <button class="btn" type="submit"><span class="btn__text">Send</span></button>
+            </form>
+        </div>
 
         <div class="contact__social">
             <a class="contact__icon contact__icon--mr" href="https://www.linkedin.com/in/gomezja/"><i class="fab fa-github fa-2x"></i></a>
