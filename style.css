@@ -577,12 +577,11 @@ textarea:focus {
 }
 
 .btn--scroll-up {
+    bottom: 40px;
     color: #ffffff;
+    display: none;
     font-size: 1rem;
     padding: 0 12px;
-
-    bottom: 40px;
-    display: none;
     position: fixed;
     right: 8.33%;
     z-index: 2;
@@ -683,5 +682,12 @@ textarea:focus {
 
     .welcome__content {
         text-align: center;
+    }
+}
+
+/*------------ Scroll Up Button ------------*/
+@media screen and (max-width: 480px) {
+    .btn--scroll-up {
+        bottom: 8.33vw;
     }
 }
