@@ -37,34 +37,46 @@ $(document).ready(function() {
         $("#close-up").css("display", "block");
         $("#close-up__image").attr("src", $(this).find("img").attr("src"));
 
-        // change text content in close-up
-        $(".close-up__name").text($(this).find(".project__name").text());
-        $(".close-up__type").text($(this).find(".project__type").text());
+        // change text content in modal
+        $(".modal__name").text($(this).find(".project__name").text());
+        $(".modal__type").text($(this).find(".project__type").text());
 
-        // add close-up type class
+        // add modal type class
         if($(this).find(".project__type").text().trim() == 'Design'){
-            $(".close-up__type").addClass("project__type--design");
+            $(".modal__type").addClass("project__type--design");
         } else {
-            $(".close-up__type").addClass("project__type--development");
+            $(".modal__type").addClass("project__type--development");
         }
     });
 
-    // project close-up close button is clicked
-    $(".close-up__button").click(function() {
+    // project modal close button is clicked
+    $(".modal__button").click(function() {
+        closeModal();
+    });
+
+    // outside of project modal area is clicked
+    $(window).click(function(event) {
+        if($(event.target).hasClass("modal")) {
+            closeModal();
+        }
+    });
+
+    // modal closing process
+    function closeModal() {
         $("body").removeClass("body--overflow");
 
         $("#close-up").css("display", "none");
         $("#close-up__image").attr("src", "");
 
-        var projectType = $(".close-up__type");
+        var projectType = $(".modal__type");
 
-        // remove close-up type class
+        // remove modal type class
         if($(projectType).hasClass("project__type--design"))
             $(projectType).removeClass("project__type--design");
         else
             $(projectType).removeClass("project__type--development");
-    });
-
+    }
+    
     // go back up when scroll-up button is clicked
     $(".btn--scroll-up").click(function() {
         $("html, body").animate({

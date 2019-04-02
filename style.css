@@ -399,7 +399,7 @@ html, body {
 }
 
 /*========================================== Image Close Up ==========================================*/
-.close-up {
+.modal {
     display: none;
     position: fixed;
     z-index: 3;
@@ -411,26 +411,27 @@ html, body {
     background: rgba(52, 52, 52, 0.9);
 }
 
-.close-up__container {
+.modal__content {
     position: relative;
     background: #f4f4f4;
     border-radius: 3px;
     width: 70%;
     max-width: 800px;
     margin: 20px auto;
+    z-index: 4;
 }
 
-.close-up__info {
+.modal__header {
     padding: 20px;
 }
 
-.close-up__name {
+.modal__name {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
-.close-up__button {
+.modal__button {
     position: absolute;
     /* top: 6px;
     right: 20px; */
@@ -441,12 +442,12 @@ html, body {
     padding: 4px 17px;
 }
 
-.close-up__button:hover {
+.modal__button:hover {
     color: #9cccc2;
     cursor: pointer;
 }
 
-.close-up__type {
+.modal__type {
     border-radius: 3px;
     color: #ffffff;
     display: inline-block;
@@ -455,7 +456,7 @@ html, body {
     padding: 5px;
 }
 
-.close-up__image {
+.modal__image {
     display: inline-block;
     height: auto;
     width: 100%;
