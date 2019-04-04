@@ -40,37 +40,38 @@ $(document).ready(function() {
         // change text content in modal
         $(".modal__name").text($(this).find(".project__name").text());
         $(".modal__type").text($(this).find(".project__type").text());
+        $(".modal__description").text($(this).find(".project__description").text());
 
         // add modal type class
-        if($(this).find(".project__type").text().trim() == 'Design'){
+        if($(this).find(".project__type").text().trim() == 'Design')
             $(".modal__type").addClass("project__type--design");
-        } else {
+        else
             $(".modal__type").addClass("project__type--development");
-        }
     });
 
     // project modal close button is clicked
-    $(".modal__button").click(function() {
+    $(".modal__button-close").click(function() {
         closeModal();
     });
 
     // outside of project modal area is clicked
     $(window).click(function(event) {
-        if($(event.target).hasClass("modal")) {
+        if($(event.target).hasClass("modal"))
             closeModal();
-        }
     });
 
-    // modal closing process
+    // close the modal
     function closeModal() {
+        $(".modal").scrollTop(0);
+
         $("body").removeClass("body--overflow");
 
         $("#close-up").css("display", "none");
         $("#close-up__image").attr("src", "");
 
+        // remove modal type class
         var projectType = $(".modal__type");
 
-        // remove modal type class
         if($(projectType).hasClass("project__type--design"))
             $(projectType).removeClass("project__type--design");
         else

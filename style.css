@@ -120,7 +120,7 @@ html, body {
 }
 
 .welcome--background {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/projects/fibonacci-calculator.png);
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/photo.jpg);
     color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
@@ -173,7 +173,7 @@ html, body {
 }
 
 /*========================================== About Section ==========================================*/
-.section-one {
+.about-project-wrapper {
     overflow: hidden;
 }
 
@@ -201,10 +201,9 @@ html, body {
     text-transform: uppercase;
 }
 
-.intro__header--bold,
-.about__header--bold,
-.project__header--bold,
-.contact__header--bold {
+.about__header::first-letter,
+.project__header::first-letter,
+.contact__header::first-letter {
     font-weight: 700;
 }
 
@@ -355,7 +354,7 @@ html, body {
 }
 
 .project__name {
-    color: #000000;
+    color: #444444;
     font-size: 1rem;
     font-weight: 700;
 }
@@ -370,7 +369,6 @@ html, body {
 .project__description {
     line-height: 1.667em;
     margin-top: 5px;
-    overflow: hidden;
 }
 
 .project__type {
@@ -407,7 +405,7 @@ html, body {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow-y: auto;
     background: rgba(0,0,0, 0.8);
 }
 
@@ -433,7 +431,7 @@ html, body {
     font-weight: 700;
 }
 
-.modal__button {
+.modal__button-close {
     color: #acacac;
     font-size: 40px;
     position: absolute;
@@ -441,9 +439,10 @@ html, body {
     right: 10px;
     top: 10px;
     transition: 0.4s;
+    -webkit-transition: 0.4s;
 }
 
-.modal__button:hover {
+.modal__button-close:hover {
     color: #444444;
     cursor: pointer;
 }
@@ -691,5 +690,14 @@ textarea:focus {
 @media screen and (max-width: 480px) {
     .btn--scroll-up {
         bottom: 8.33vw;
+    }
+}
+
+/*------------ Modal View ------------*/
+@media screen and (max-width: 780px) {
+    .modal__content {
+        border-radius: 0px;
+        margin: 0px;
+        width: 100%;
     }
 }
