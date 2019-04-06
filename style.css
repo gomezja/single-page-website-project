@@ -3,6 +3,7 @@
     box-sizing: border-box;
 
     font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Hind', sans-serif; */
 }
 
 html {
@@ -429,6 +430,7 @@ html, body {
     color: #444444;
     font-size: 1.2rem;
     font-weight: 700;
+    margin-right: 50px;
 }
 
 .modal__button-close {
@@ -574,7 +576,6 @@ textarea:focus {
     font-size: 1rem;
     letter-spacing: 0.15em;
     padding: 0 20px;
-    text-transform: uppercase;
 }
 
 .btn--scroll-up {
