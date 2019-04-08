@@ -2,12 +2,11 @@
     margin: 0;
     box-sizing: border-box;
 
-    font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Hind', sans-serif; */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 html {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 html, body {
@@ -121,7 +120,7 @@ html, body {
 }
 
 .welcome--background {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/photo.jpg);
+    background: url(images/pentagons.jpg);
     color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
@@ -364,11 +363,11 @@ html, body {
 .project__date {
     color: #797979;
     font-weight: 400;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
 .project__description {
-    line-height: 1.667em;
+    line-height: 1.5em;
     margin-top: 5px;
 }
 
