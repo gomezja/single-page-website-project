@@ -20,7 +20,7 @@ $(document).ready(function() {
     // go to contact section
     $("#goToContact").click(function() {
         $("html, body").animate({
-            scrollTop: $("#contact").offset().top
+            scrollTop: $("#contact").offset().top + 1
         }, 800);
     });
 
