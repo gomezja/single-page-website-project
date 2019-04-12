@@ -18,12 +18,12 @@ html, body {
 }
 
 /*========================================== Navigation Bar ==========================================*/
-.a {
+.nav {
     width: 100%;
     padding: 0 calc(8.33% - 25px);
 }
 
-.nav {
+.nav__area {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -60,7 +60,6 @@ html, body {
     align-items: center; 
 
     color: #e8e8e8;
-    /* color: black; */
     text-decoration: none;
     text-align: center;
     font-size: 1rem;
@@ -117,10 +116,6 @@ html, body {
 .welcome {
     height: calc(100vh);
     position: relative;
-}
-
-.welcome--background {
-    background: url(images/background/develop.png);
     color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,7 +173,6 @@ html, body {
     overflow: hidden;
 }
 
-.intro,
 .about,
 .project,
 .contact {
@@ -279,10 +273,6 @@ html, body {
 .project {
     position: relative;
     width: 100%;
-}
-
-.project--background-color {
-    background: #f4f4f4;
 }
 
 .project__svg {
@@ -693,5 +683,18 @@ textarea:focus {
         border-radius: 0px;
         margin: 0px;
         width: 100%;
+    }
+}
+
+/*------------ Welcome Background Image ------------*/
+@media screen and (min-width: 761px) {
+    .welcome--background {
+        background-image: url(images/background/background.png);
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .welcome--background {
+        background-image: url(images/background/background-sm.png);
     }
 }
