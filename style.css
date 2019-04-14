@@ -191,7 +191,7 @@ html, body {
 .about,
 .project,
 .contact {
-    padding: 90px 0 90px 0;
+    padding: 90px 0;
 }
 
 .about__title,
@@ -274,26 +274,21 @@ html, body {
 }
 
 /*========================================== Project Section ==========================================*/
-.project::before {
-    background: #f4f4f4;
-    content: "";
-    height: 180%;
-    position: absolute;
-    top: 0;
-    transform: skewY(-6deg);
-    width: 100%;
-    z-index: -1;
-}
-
 .project {
     position: relative;
     width: 100%;
+    background: #f4f4f4;
 }
 
 .project__svg {
     position: absolute;
     top: 0;
-    width: 100%;    
+    transform: translateY(-1px);
+    width: 100%;
+}
+
+.project__svg path {
+    fill: #ffffff;
 }
 
 .project__container,
