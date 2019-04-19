@@ -485,7 +485,6 @@ html, body {
 }
 
 .contact:before {
-    background-image: url(images/backgrounds/contact-md.png);
     background-position: center top;
 }
 
@@ -730,11 +729,19 @@ textarea:focus {
     .intro:before {
         background-image: url(images/backgrounds/background-md.png);
     }
+
+    .contact:before {
+        background-image: url(images/backgrounds/contact-md.png);
+    }
 }
 
 @media screen and (max-width: 760px) {
     .intro:before {
         background-image: url(images/backgrounds/background-sm.png);
+    }
+
+    .contact:before {
+        background-image: url(images/backgrounds/contact-sm.png);
     }
 }
 
@@ -744,3 +751,4 @@ textarea:focus {
         height: 6.2em;
     }
 }
+
