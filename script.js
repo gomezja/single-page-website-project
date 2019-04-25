@@ -36,7 +36,12 @@ $(document).ready(function() {
         $("body").addClass("body--overflow");
 
         $("#close-up").css("display", "block");
-        $("#close-up__image").attr("src", $(this).find("img").attr("src"));
+
+        // check if mobile screen
+        if($(window).width() < 425)
+            $("#close-up__image").attr("src", $(this).find("img").attr("src"));
+        else
+            $("#close-up__image").attr("src", $(this).find("img").attr("src").replace("-thumbnail", ""));
 
         // change text content in modal
         $(".modal__name").text($(this).find(".project__name").text());
