@@ -206,6 +206,58 @@
     </div>
 
     <!-- CONTACT SECTION -->
+    <?php
+        $to = "jgomez42gb@gmail.com";
+        $successMsg = "";
+        $nameError = $emailError = $messageError = "";
+        $name = $email = $message = $subject = "";
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(empty($_POST["name"]))
+                $nameError = "Name is required";
+            else {
+                $name = testInput($_POST["name"]);
+
+                if(!preg_match("/^[a-zA-Z ]*$/", $name))
+                    $nameError = "Only letters and white space allowed";
+            }
+
+            if(empty($_POST["email"]))
+                $emailError = "Email is required";
+            else {
+                $email = testInput($_POST["email"]);
+
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                $emailError = "Invalid email format"; 
+            }
+
+            if(empty($_POST["message"]))
+                $messageError = "Message is required";
+            else
+                $message = testInput($_POST["message"]);
+            
+            $subject = "gomezja.com, " . $email;
+
+            $headers = "FROM: gomezja.com";
+
+            // if(mail($to,$subject,$message,$headers)) {
+            //     echo "Success";
+
+            //     $name = $email = $message = "";
+            // }
+            // else {
+            //     echo "Fail";
+            // }
+        }
+
+        function testInput($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+        }
+    ?>
+
     <section class="contact" id="contact">       
         <div class="contact__title">
             <h1 class="contact__header">Let's Connect</h1>
@@ -213,14 +265,23 @@
         </div>
         
         <div class="contact__wrapper">
-            <form class="contact__form" action="mailto:someone@example.com" method="post" enctype="text/plain">
-                <input class="contact__input contact__input--100" type="text" name="name" placeholder="Name">
-                
-                <input class="contact__input contact__input--100" type="text" name="email" placeholder="Email">
+            <form class="contact__form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                <div class="contact__area">
+                    <input class="contact__input contact__input--100" type="text" name="name" placeholder="Name" value="<?php echo $name ?>">
+                    <span class="error"><?php echo $nameError; ?></span>
+                </div>
 
-                <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here"></textarea>
-                
-                <button class="btn" type="submit"><span class="btn__text">Send</span></button>
+                <div class="contact__area">
+                    <input class="contact__input contact__input--100" type="text" name="email" placeholder="Email" value="<?php echo $email ?>">
+                    <span class="error"><?php echo $emailError; ?></span>
+                </div>
+
+                <div class="contact__area">
+                    <textarea class="contact__input contact__input--textarea contact__input--100" name="message" placeholder="Type your message here"><?php echo $message ?></textarea>
+                    <span class="error"><?php echo $messageError; ?></span>
+                </div>
+
+                <button class="btn" type="submit"><span class="btn__text">Send</span></button><span class="success"><?php echo $successMsg; ?></span>
             </form>
         </div>
 

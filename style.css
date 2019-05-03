@@ -480,6 +480,17 @@ html, body {
 }
 
 /*========================================== Contact Section ==========================================*/
+.error {
+    color: #d46c26;
+    font-size: 12px;
+    position: absolute;
+    margin-top: 2px;
+}
+
+.success {
+
+}
+
 .contact {
     position: relative;
 }
@@ -509,6 +520,10 @@ html, body {
     width: 100%;
 }
 
+.contact__area {
+    margin-bottom: 20px;
+}
+
 .contact__input {
     background: #e8e8e8;
     border: none;
@@ -516,7 +531,6 @@ html, body {
     display: block;
     font-size: 1rem;
     letter-spacing: 1px;
-    margin-bottom: 4%;
     padding: 7px;
     transition: background ease 0.4s;
     -webkit-transition: background ease 0.4s;
